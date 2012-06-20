@@ -47,6 +47,10 @@ module BigCommerce
     def get_product(id)
       @connection.get '/products/' + id.to_s
     end
+    
+    def get_product_images(product_id)
+      @connection.get '/products/' + product_id.to_s + '/images'
+    end
 
     def get_categories
       @connection.get '/categories'
